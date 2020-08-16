@@ -9,8 +9,7 @@ downloads: |
 checksums: |
   40f83eda27cdbeb25cd4da48cefb639af1b9395d6026d2da1825bf059239658c
 install: |
-  # tar xvf curl-7.71.1.tar.xz
-  # cd curl-7.71.1
+  cd curl-7.71.1
   ./configure \
       --prefix=/usr \
       --enable-ipv6 \
