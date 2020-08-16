@@ -1,4 +1,4 @@
-name: "curlr"
+name: "curl"
 description: "Command line tool and library for transferring data with URLs."
 version: "7.71.1 1"
 license: "GPL-3.0"
