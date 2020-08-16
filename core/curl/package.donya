@@ -1,5 +1,5 @@
 name: "curlr"
-description: "A minimal package manager."
+description: "Command line tool and library for transferring data with URLs."
 version: "7.71.1 1"
 license: "GPL-3.0"
 pubDate: 2020-08-05
