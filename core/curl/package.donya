@@ -2,9 +2,9 @@ name: "curlr"
 description: "Command line tool and library for transferring data with URLs."
 version: "7.71.1 1"
 license: "GPL-3.0"
-pubDate: 2020-08-05
+date: 2020-08-05
 dependencies: []
-download: |
+downloads: |
   https://curl.haxx.se/download/curl-7.71.1.tar.xz
 checksums: |
   40f83eda27cdbeb25cd4da48cefb639af1b9395d6026d2da1825bf059239658c
