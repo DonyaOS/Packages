@@ -1,0 +1,30 @@
+name: "curlr"
+description: "A minimal package manager."
+version: "7.71.1 1"
+license: "GPL-3.0"
+pubDate: 2020-08-05
+dependencies: []
+download: |
+  https://curl.haxx.se/download/curl-7.71.1.tar.xz
+checksums: |
+  40f83eda27cdbeb25cd4da48cefb639af1b9395d6026d2da1825bf059239658c
+install: |
+  ./configure \
+      --prefix=/usr \
+      --enable-ipv6 \
+      --enable-unix-sockets \
+      --enable-hidden-symbols \
+      --without-libidn \
+      --without-libidn2 \
+      --disable-manual \
+      --disable-ldap \
+      --disable-ares \
+      --without-librtmp \
+      --without-icu \
+      --without-libpsl \
+      --with-pic \
+      --with-ca-fallback
+  make curl_LDFLAGS=-all-static
+  make DESTDIR="$1" install
+remove: |
+  echo "Removing … "
