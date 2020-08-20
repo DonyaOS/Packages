@@ -11,18 +11,18 @@ basic UNIX utilities and tools.
 ## Package Structure
 
 ```
-zlib/            # Package name.                  
-- build          # Build script (chmod +x).       
-- sources        # Remote and local sources.      
-- version        # Package version.               
+PACKAGE_DIR/
+  -package.donya
+    PACKAGE_NAME
+    DESCRIPTION
+    VERSION
+    LICENSE
+    PACKAGE_RELEASE_DATE
+    DEPENDENCIES
+    SOURCES
+    CHECKSUMS
+    INSTALL
 
-Optional files:
-
-- depends        # Dependencies (usually required).
-- pre-remove     # Pre-remove script (chmod +x).
-- post-install   # Post-install script (chmod +x).
-- patches/*      # Directory to store patches.
-- files/*        # Directory to store misc files.
 ```
 
 ### Contribution
