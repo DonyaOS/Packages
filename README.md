@@ -11,17 +11,45 @@ basic UNIX utilities and tools.
 ## Package Structure
 
 ```
-PACKAGE_DIR/
-  -package.donya
-    PACKAGE_NAME
-    DESCRIPTION
-    VERSION
-    LICENSE
-    PACKAGE_RELEASE_DATE
-    DEPENDENCIES
-    SOURCES
-    CHECKSUMS
-    INSTALL
+name: "name_as_string"
+description: "description_string"
+version: "version_number_of_software_dot_allowed"
+license: "name_of_license"
+date: yyyy-mm-dd
+dependencies: []
+downloads: |
+  ... link of files...
+checksums: |
+  ...put your checksum for downloads file at here...
+install: |
+  ...Commands...
+remove: |
+  ...Commands...
+
+
+
+Example:
+name: "zlib"
+description: "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
+version: "1.2.11"
+license: "zlib/libpng"
+date: 2017-01-15
+dependencies: []
+downloads: |
+  https://zlib.net/zlib-1.2.11.tar.gz
+checksums: |
+  c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1
+install: |
+  cd zlib-1.2.11
+  ./configure \
+    --prefix=/usr \
+    --libdir=/usr/lib \
+    --shared
+
+make
+make DESTDIR="$1" install
+remove: |
+  echo "Removing … "
 
 ```
 
