@@ -1,5 +1,12 @@
 # Packages
 
+- [Donya Package System](#donya-package-system)
+- [Package Structure](#package-structure)
+- [A sample package for DonyaOS](#a-sample-package-for-donyaos)
+- [Submit a new package for Donya](#submit-a-new-package-for-donya)
+- [Contribution to Donya](#contribution-to-donya)
+- [License](#license)
+
 ## Donya Package System
 
 The distribution employs a package system based around the concept of easily
@@ -31,7 +38,7 @@ PACAKAGE_NAME/
       ...Commands...
 ```
 
-### A Sample package for DonyaOS
+### A sample package for DonyaOS
 
 [**core/zlib/package.donya**](core/zlib/package.donya)
 
@@ -60,11 +67,11 @@ remove: |
 
 ### Submit a new package for Donya
 
-Follow [Donya structure](#package-structure) carefully, Then fork this repository and push your commits, and finally send Pull Request.
+Follow [Donya structure](#package-structure) carefully, then fork this repository and push your commits, and finally send Pull Request.
 
 ### Contribution to Donya
 
-Please make sure to read the Contributing Guide before making a pull request. If you have a Donya-related project/feature/tool, add it with a pull request to this curated list!
+Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making a pull request. If you have a Donya-related project/feature/tool, add it with a pull request to this curated list!
 
 Thank you to all the people who already contributed to DonyaOS!
 
