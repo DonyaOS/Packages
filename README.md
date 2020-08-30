@@ -10,6 +10,8 @@ basic UNIX utilities and tools.
 
 ## Package Structure
 
+File name: **CATEGORY_NAME/PACKAGE_NAME/package.donya**
+
 ```
 PACAKAGE_NAME/
   -package.donya
@@ -27,37 +29,40 @@ PACAKAGE_NAME/
       ...Commands...
     remove: |
       ...Commands...
-
-
-
-Example:
-zlib/
-  -package.donya
-    name: "zlib"
-    description: "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
-    version: "1.2.11"
-    license: "zlib/libpng"
-    date: 2017-01-15
-    dependencies: []
-    downloads: |
-      https://zlib.net/zlib-1.2.11.tar.gz
-    checksums: |
-      c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1
-    install: |
-      cd zlib-1.2.11
-      ./configure \
-        --prefix=/usr \
-        --libdir=/usr/lib \
-        --shared
-
-    make
-    make DESTDIR="$1" install
-    remove: |
-      echo "Removing … "
-
 ```
 
-### Contribution
+### A Sample package for DonyaOS
+
+[**core/zlib/package.donya**](core/zlib/package.donya)
+
+```
+name: "zlib"
+description: "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
+version: "1.2.11"
+license: "zlib"
+date: 2017-01-15
+dependencies: []
+downloads: |
+  https://zlib.net/zlib-1.2.11.tar.gz
+checksums: |
+  c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1
+install: |
+  cd zlib-1.2.11
+  ./configure \
+    --prefix=/usr \
+    --libdir=/usr/lib \
+    --shared
+  make
+  make DESTDIR="$1" install
+remove: |
+  echo "Removing … "
+```
+
+### Submit a new package for Donya
+
+Follow [Donya structure](#package-structure) carefully, Then fork this repository and push your commits, and finally send Pull Request.
+
+### Contribution to Donya
 
 Please make sure to read the Contributing Guide before making a pull request. If you have a Donya-related project/feature/tool, add it with a pull request to this curated list!
 
