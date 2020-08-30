@@ -1,7 +1,7 @@
 name: "zlib"
 description: "A Massively Spiffy Yet Delicately Unobtrusive Compression Library"
 version: "1.2.11"
-license: "zlib/libpng"
+license: "zlib"
 date: 2017-01-15
 dependencies: []
 downloads: |
@@ -14,8 +14,7 @@ install: |
     --prefix=/usr \
     --libdir=/usr/lib \
     --shared
-
-make
-make DESTDIR="$1" install
+  make
+  make DESTDIR="$1" install
 remove: |
   echo "Removing … "
