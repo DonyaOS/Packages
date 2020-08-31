@@ -28,7 +28,7 @@ PACAKAGE_NAME/
     license: "name_of_license"
     date: yyyy-mm-dd
     dependencies: []
-    downloads: |
+    sources: |
       ... link of files...
     checksums: |
       ...put your checksum for downloads file at here...
@@ -49,7 +49,7 @@ version: "1.2.11"
 license: "zlib"
 date: 2017-01-15
 dependencies: []
-downloads: |
+sources: |
   https://zlib.net/zlib-1.2.11.tar.gz
 checksums: |
   c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1

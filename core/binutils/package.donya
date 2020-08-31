@@ -1,0 +1,41 @@
+name: "binutils"
+description: "The GNU Binutils are a collection of binary tools"
+version: "2.35"
+license: "GPL-3.0"
+date: 2020-07-24 
+dependencies: [flex, zlib]
+downloads: |
+  https://ftp.gnu.org/gnu/binutils/binutils-2.35.tar.xz
+checksums: |
+  1b11659fb49e20e18db460d44485f09442c8c56d5df165de9461eb09c8302f85
+install: |
+    cat > makeinfo <<EOF
+    #!/bin/sh
+    printf 'makeinfo (GNU texinfo) 5.2\n'
+    EOF
+
+    chmod +x makeinfo
+    export PATH=$PATH:$PWD
+
+./configure \
+    --prefix=/usr \
+    --with-lib-path=/usr/lib:/usr/local/lib \
+    --enable-targets=x86_64-pep \
+    --enable-gold \
+    --enable-lto \
+    --enable-ld=default \
+    --enable-plugins \
+    --disable-multilib \
+    --disable-werror \
+    --disable-gdb \
+    --disable-nls \
+    --disable-readline \
+    --disable-gprof \
+    --with-mmap \
+    --with-system-zlib
+
+make configure-host
+make tooldir=/usr
+make DESTDIR="$1" install
+remove: |
+  echo "Removing … "
