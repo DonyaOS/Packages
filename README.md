@@ -1,5 +1,9 @@
 # Packages
 
+[![MIT License](https://img.shields.io/github/license/DonyaOS/Packages?color=brightgreen)](LICENSE)
+[![GitHub Linter Workflow Status](https://img.shields.io/github/workflow/status/DonyaOS/Packages/Lint?label=Linter)](#packages)
+[![IRC chat on freenode](https://img.shields.io/badge/IRC%20chat%20on%20freenode-%23DonyaOS-brightgreen)](#packages)
+
 - [Donya Package System](#donya-package-system)
 - [Package Structure](#package-structure)
 - [A sample package for DonyaOS](#a-sample-package-for-donyaos)
