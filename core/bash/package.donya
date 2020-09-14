@@ -1,0 +1,22 @@
+name: "bash"
+description: "Bash is the GNU Project's shell"
+version: "5.0"
+license: "GPL-3.0"
+date: 2020-08-14
+dependencies: ["ncurses", "readline"]
+downloads: |
+  https://ftp.gnu.org/gnu/bash/bash-5.0.tar.gz
+checksums: |
+  b4a80f2ac66170b2913efbfb9f2594f1f76c7b1afd11f799e22035d63077fb4d 
+install: |
+  cd bash-5.0 
+  ./configure \
+      --prefix=/usr \
+      --with-curses \
+      --enable-readline \
+      --without-bash-malloc \
+      --with-installed-readline
+  make
+  make DESTDIR="$1" install
+remove: |
+  echo "Removing … "

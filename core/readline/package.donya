@@ -1,0 +1,18 @@
+name: "readline"
+description: "The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in."
+version: "8.0"
+license: "GPL-3.0"
+date: 2020-08-14
+dependencies: ["ncurses"]
+downloads: |
+  ftp://ftp.cwru.edu/pub/bash/readline-8.0.tar.gz
+checksums: |
+  40f83eda27cdbeb25cd4da48cefb639af1b9395d6026d2da1825bf059239658c
+install: |
+  cd readline-8.0 
+  ./configure \
+      --prefix=/usr \
+  make 
+  make DESTDIR="$1" install
+remove: |
+  echo "Removing … "
