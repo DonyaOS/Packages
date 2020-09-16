@@ -81,4 +81,4 @@ Thank you to all the people who already contributed to DonyaOS!
 
 ### License
 
-[![MIT License](https://img.shields.io/github/license/DonyaOS/Packages)](LICENSE)
+[MIT License](LICENSE)
